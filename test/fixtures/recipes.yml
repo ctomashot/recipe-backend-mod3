@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  content: MyString
+  image: MyString
+  ingredients: MyString
+  user_id: 1
+  vegetarian: false
+  vegan: false
+
+two:
+  title: MyString
+  content: MyString
+  image: MyString
+  ingredients: MyString
+  user_id: 1
+  vegetarian: false
+  vegan: false
