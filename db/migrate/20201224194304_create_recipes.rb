@@ -6,8 +6,8 @@ class CreateRecipes < ActiveRecord::Migration[6.0]
       t.string :image
       t.string :ingredients
       t.integer :user_id
-      t.boolean :vegetarian
-      t.boolean :vegan
+      t.boolean :vegetarian, :default => false
+      t.boolean :vegan, :default => false
 
       t.timestamps
     end

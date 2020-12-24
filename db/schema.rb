@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_24_194636) do
+ActiveRecord::Schema.define(version: 2020_12_24_201243) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(version: 2020_12_24_194636) do
     t.string "image"
     t.string "ingredients"
     t.integer "user_id"
-    t.boolean "vegetarian"
-    t.boolean "vegan"
+    t.boolean "vegetarian", default: false
+    t.boolean "vegan", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
