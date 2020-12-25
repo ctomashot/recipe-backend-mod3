@@ -2,7 +2,10 @@ class RatingsController < ApplicationController
     
     def show
         find_rating
-        render json: find_rating, except: [:created_at, :updated_at]
+        render json: find_rating.to_json(:include => {
+            :recipe => {:only => [:title, :content, :image, :ingredients, :user_id, :vegetarian, :vegan]},
+            :user => {:only => [:username]}
+        }, except: [:created_at, :updated_at])
     end
 
     def new 

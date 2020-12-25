@@ -2,12 +2,16 @@ class RecipesController < ApplicationController
 
     def index 
         recipes = Recipe.all
-        render json: recipes, except: [:created_at, :updated_at]
+        render json: recipes.to_json(:include => {
+            :user => {:only => [:username]}
+        }, except: [:created_at, :updated_at])
     end
 
     def show 
         find_recipe
-        render json: find_recipe, except: [:created_at, :updated_at]
+        render json: find_recipe.to_json(:include => {
+            :user => {:only => [:username]}
+        }, except: [:created_at, :updated_at])
     end
 
     def new 
