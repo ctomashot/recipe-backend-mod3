@@ -64,4 +64,3 @@ Rating.create(user_id: cole.id, recipe_id: rec9.id, rating: 2)
 Rating.create(user_id: oscar.id, recipe_id: rec10.id, rating: 1)
 Rating.create(user_id: ronalyssa.id, recipe_id: rec11.id, rating: 5)
 Rating.create(user_id: brodrick.id, recipe_id: rec12.id, rating: 4)
-    
