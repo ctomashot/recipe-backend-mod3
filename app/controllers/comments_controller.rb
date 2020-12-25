@@ -2,7 +2,11 @@ class CommentsController < ApplicationController
 
     def show
         find_comment
-        render json: find_comment, except: [:created_at, :updated_at]
+        render json: find_comment.to_json(:include => {
+            :recipe => {:only => [:title, :content, :image, :ingredients, :user_id, :vegetarian, :vegan]},
+            :user => {:only => [:username]}
+        }, except: [:created_at, :updated_at])
+
     end
 
     def new 
