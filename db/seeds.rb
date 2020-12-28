@@ -20,7 +20,7 @@ cole = User.create(name: "Cole", username: "cole4")
 #VEGETARIAN
 rec1 = Recipe.create(user_id: brodrick.id, title: "Black Bean Quesadillas", content: "Combine beans, cheese and 1/4 cup salsa in a medium bowl. Place tortillas on a work surface. Spread 1/2 cup filling on half of each tortilla. Fold tortillas in half, pressing gently to flatten. Heat 1 teaspoon oil in a large nonstick skillet over medium heat. Add 2 quesadillas and cook, turning once, until golden on both sides, 2 to 4 minutes total. Transfer to a cutting board and tent with foil to keep warm. Repeat with the remaining 1 teaspoon oil and quesadillas. Serve the quesadillas with avocado and the remaining salsa.", image: "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F26232447%2F3926485.jpg&w=1200&c=sc&poi=face&q=85", ingredients: "15-ounce can black beans, rinsed, Half cup shredded Monterey Jack cheese, preferably pepper Jack, Half cup prepared fresh salsa, divided, Four 8-inch whole-wheat tortillas, 2 teaspoons canola oil, divided, 1 ripe avocado, diced", vegetarian: true)
 
-rec2 = Recipe.create(user_id: ronalyssa.id, title: "", content: "", image: "", ingredients: "", vegetarian: true)
+rec2 = Recipe.create(user_id: ronalyssa.id, title: " ", content: "", image: "", ingredients: "", vegetarian: true)
 rec3 = Recipe.create(user_id: oscar.id, title: "", content: "", image: "", ingredients: "", vegetarian: true)
 rec4 = Recipe.create(user_id: cole.id, title: "", content: "", image: "", ingredients: "", vegetarian: true)
 
