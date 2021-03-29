@@ -9,8 +9,9 @@ class CommentsController < ApplicationController
     end
 
     def show
-        find_comment
-        render json: find_comment.to_json(:include => {
+        # find_comment
+        comment = Comment.find(params[:id])
+        render json: comment.to_json(:include => {
             :recipe => {:only => [:title, :content, :image, :ingredients, :user_id, :vegetarian, :vegan]},
             :user => {:only => [:username]}
         }, except: [:created_at, :updated_at])
@@ -29,7 +30,8 @@ class CommentsController < ApplicationController
     end
 
     def destroy
-        find_comment.destroy
+        comment = Comment.find(params[:id])
+        comment.destroy
     end
 
     private 
@@ -38,8 +40,8 @@ class CommentsController < ApplicationController
         params.require(:comment).permit(:content, :user_id, :recipe_id)
     end
 
-    def find_comment
-       comment = Comment.find(params[:id])
-    end
+    # def find_comment
+    #    comment = Comment.find(params[:id])
+    # end
 
 end
