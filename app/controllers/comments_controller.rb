@@ -29,6 +29,15 @@ class CommentsController < ApplicationController
         end
     end
 
+    def edit 
+        find_comment
+    end
+
+    def update 
+        find_comment.update(comment_params)
+        render json: find_comment, except: [:created_at, :updated_at]
+    end
+
     def destroy
         comment = Comment.find(params[:id])
         comment.destroy
@@ -40,8 +49,8 @@ class CommentsController < ApplicationController
         params.require(:comment).permit(:content, :user_id, :recipe_id)
     end
 
-    # def find_comment
-    #    comment = Comment.find(params[:id])
-    # end
+   def find_comment
+       comment = Comment.find(params[:id])
+    end
 
 end
