@@ -14,4 +14,4 @@ Install Instructions:
 
 * Run bundle install
 
-Authors:
+Authors: Cole Tomashot
